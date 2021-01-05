@@ -1,0 +1,167 @@
+/* BODY */
+body{
+    margin: 0;
+    background-color: #23265B;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/* FIN DE BODY */
+
+/* GENERALES */
+html{
+    /*font-size: 62.5%; Reset para REMS - 62.5% = 10px de 16 px*/
+    box-sizing: border-box;
+}
+*, *:before, * :after{
+    box-sizing: inherit;
+}
+.titulo{
+    padding: 0 0 1.5rem 0;
+}
+figure{
+    width: 100%;
+    margin: 0;
+}
+figure img{
+    width: 100%;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Fjalla One', sans-serif;
+}
+h1{
+    line-height: 1.5em;
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: -.2px;
+    text-transform: capitalize;
+    color: white;
+    margin: 0;
+}
+h2{
+    margin: 0;
+    padding: 1.5rem 0;
+    text-transform: uppercase;
+    color: #005086;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+/* FIN DE GENERALES */
+
+
+/* HEADER */
+.header{
+    width: 100%;
+}
+.header figure{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.header figure img{
+    width: auto;
+    height: 60px;
+}
+/* FIN DE HEADER */
+
+/* NAVEGACION */
+.navegacion{
+    width: 100%;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    width: inherit;
+}
+li{
+    list-style: none;
+}
+.link{
+    display: flex;
+    justify-content: center;
+    padding: 0.7em 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14.5px;
+}
+.link:hover{
+    background-color: #72C0DD;
+}
+/* FIN DE NAVEGACION */
+
+/* MAIN */
+.main{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    padding: 2rem 1.5rem;
+}
+.figure-main{
+    width: auto;
+}
+figure .fotografia{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.presentacion-main{
+    color: white;
+    font-size: 25px;
+}
+.presentacion-main span{
+    color: #39a9d1;
+}
+/* FIN DE MAIN */
+
+/* PROYECTOS */
+.projects{
+    width: 100%;
+    padding: 1.5rem;
+}
+.project{
+    box-shadow: 0 0 6px black;
+    background-color: white;
+    padding: 0.6rem;
+    margin-bottom: 7%;
+    border-radius: 10px;
+
+}
+.project-title{
+    margin: 0;
+    font-size: 1.01rem;
+}
+.project-languaje{
+    margin: 0.9rem 0;
+}
+.project-date{
+    margin: 0.9rem 0;
+}
+.project-link{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+/* FIN DE PROYECTOS */
+
+/* EXPERIENCIAS */
+.experiences{
+    width: 100%;
+}
+/* FIN DE EXPERIENCIAS */
+
+/* CONTACTO */
+.contact{
+    width: 100%;
+}
+/* FIN DE CONTACTO */
+
+/* FOOTER */
+.footer{
+    width: 100%;
+}
+/* FIN DE FOOTER */
