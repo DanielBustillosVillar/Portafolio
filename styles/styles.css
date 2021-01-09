@@ -7,6 +7,10 @@ body{
 /* FIN DE BODY */
 
 /* GENERALES */
+.wrapper{
+    max-width: 1150px;
+    margin: 0 auto;
+}
 html{
     /*font-size: 62.5%; Reset para REMS - 62.5% = 10px de 16 px*/
     box-sizing: border-box;
@@ -16,6 +20,7 @@ html{
 }
 .titulo{
     padding: 0 0 1.5rem 0;
+    font-size: 20px;
 }
 figure{
     width: 100%;
@@ -40,9 +45,21 @@ h2{
     margin: 0;
     padding: 1.5rem 0;
     text-transform: uppercase;
-    color: #005086;
+    color: #39a9d1;
     font-weight: bold;
     font-size: 1.6rem;
+}
+.boton{
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: 1px solid #23265b;
+    color: #23265b;
+    cursor: pointer;
+}
+@media screen and (max-width: 320px){
+    .titulo{
+        font-size: 18px;
+    }
 }
 /* FIN DE GENERALES */
 
@@ -62,6 +79,20 @@ h2{
 .header figure img{
     width: auto;
     height: 60px;
+}
+@media screen and (min-width: 1024px){
+    /* HEADER */
+    .header .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+    }.header figure{
+        justify-content: left;
+        padding: 20px 48px;
+    }
+    
+    /* FIN DE HEADER */
 }
 /* FIN DE HEADER */
 
@@ -88,10 +119,49 @@ li{
 .link:hover{
     background-color: #72C0DD;
 }
+@media screen and (max-width: 320px){
+    .link{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 768px){
+    
+}
+@media screen and (min-width: 1024px){
+    .navegacion{
+        height: inherit;
+    }
+    .navegacion ul{
+        height: inherit;
+        display: flex;
+        align-items: center;
+    }
+    .navegacion ul li{
+        height: inherit;
+    }
+    .link{
+        padding: 0.7em 2em;
+        font-size: 16px;
+        width: inherit;
+        height: inherit;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 1440px){
+    .header .wrapper{
+        height: 100px;
+    }
+    .link{
+        font-size: 18px;
+    }
+}
 /* FIN DE NAVEGACION */
 
 /* MAIN */
 .main{
+    background-color: #292a358f;
+}
+.main .wrapper{
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -101,20 +171,83 @@ li{
 .figure-main{
     width: auto;
 }
-figure .fotografia{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-}
 .presentacion-main{
     color: white;
-    font-size: 25px;
+    font-size: 22px;
 }
 .presentacion-main span{
     color: #39a9d1;
+}
+
+@media screen and (max-width: 320px){
+    .presentacion-main{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 570px){
+    figure .fotografia{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+@media screen and (min-width: 571px){
+    .main .wrapper{
+        display: flex;
+        justify-content: space-between;
+        height: 200px;
+        padding: 0;
+    }
+    .presentacion-main{
+        padding: 0.5rem 1rem;
+        font-size: 20px;
+    }
+    .figure-main{
+        width: 250px;
+        height: inherit;
+    }
+    .figure-main .fotografia{
+        width: inherit;
+        height: inherit;
+    }
+}
+@media screen and (min-width: 768px){
+    .main .wrapper{
+        height: 250px;
+    }
+    .presentacion-main{
+        padding: 1rem 2rem;
+        font-size: 25px;
+    }
+    .figure-main{
+        width: 350px;
+    }
+}
+@media screen and (min-width: 1024px){
+    
+    /* MAIN */
+    .main .wrapper{
+        height: 300px;
+    }
+    .presentacion-main{
+        padding: 2rem 3rem;
+        font-size: 35px;
+    }
+    .figure-main{
+        width: 450px;
+    }
+    /* FIN DE MAIN */
+}
+@media screen and (min-width: 1440px){
+    .main .wrapper{
+        height: 350px;
+    }
+    .figure-main{
+        width: 500px;
+    }
 }
 /* FIN DE MAIN */
 
@@ -122,14 +255,17 @@ figure .fotografia{
 .projects{
     width: 100%;
     padding: 1.5rem;
+    padding-bottom: 0;
 }
 .project{
     box-shadow: 0 0 6px black;
     background-color: white;
     padding: 0.6rem;
-    margin-bottom: 7%;
+    margin-bottom: 3%;
     border-radius: 10px;
-
+}
+.project:last-of-type{
+    margin-bottom: 0;
 }
 .project-title{
     margin: 0;
@@ -146,22 +282,321 @@ figure .fotografia{
     color: black;
     font-weight: bold;
 }
+.project-description{
+    font-size: 14.5px;
+}
+@media screen and (max-width: 320px){
+    .project-title{
+        font-size: 15px;
+    }
+    .project-languaje,
+    .project-date,
+    .project-link{
+        font-size: 14px;
+    }
+    .project-description{
+        font-size: 13px;
+    }
+}
+@media screen and (min-width: 768px){
+    .project-title{
+        font-size: 20px;
+    }
+    .project-date,
+    .project-languaje,
+    .project-link{
+        font-size: 18px;
+    }
+    .project-description{
+        font-size: 16px;
+    }
+    .projects{
+        padding: 2rem;
+        padding-bottom: 0;
+    } 
+}
+@media screen and (min-width: 1024px){
+    .titulo{
+        font-size: 1.8rem;
+    }
+    .projects{
+        padding: 2rem 3rem 0 3rem;
+    }
+    .project{
+       display: flex; 
+    }
+    .container-project-figure{
+        padding: 2%;
+    }
+    .project-left{
+        width: 48%;
+        padding: 2%;
+    }
+}
+@media screen and (min-width: 1440px){
+    .project-title{
+        font-size: 22px;
+    }
+    .project-languaje{
+        font-size: 20px;
+    }
+    .project-date{
+        font-size: 20px;
+    }
+    .project-link{
+        font-size: 20px;
+    }
+    .project-description{
+        font-size: 18px;
+    }
+}
+
 /* FIN DE PROYECTOS */
 
 /* EXPERIENCIAS */
+.experience{
+    background-color: rgb(130, 130, 219);
+    border-radius: 15px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
 .experiences{
     width: 100%;
+    padding: 1.5rem;
+}
+.experience-down{
+    background-color: white;
+    padding: 1rem;
+    margin: -1.5rem 1.5rem 1.3rem 1.5rem;
+    position: relative;
+    border-radius: 10px;
+}
+.experience-figure{
+    height: 200px;
+}
+.experience-figure-img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
+.titulo-experience{
+    margin: 0;
+    font-size: 16px;
+}
+.experience-description{
+    font-size: 14.5px;
+}
+@media screen and (max-width: 320px){
+    .titulo-experience{
+        font-size: 14px;
+    }
+    .experience-description{
+        font-size: 12px;
+    }
+    .experience-down{
+        margin: -1.5rem 1rem 1.3rem 1rem;
+    }
+}
+@media screen and (min-width: 768px){
+    .experiences{
+        padding: 2rem;
+        padding-bottom: 0;
+    }
+    .titulo-experience{
+        font-size: 17px;
+    }
+    .experience-description{
+        font-size: 15px;
+    }
+}
+@media screen and (min-width: 1024px){
+    .experiences{
+        padding: 2rem 3rem;
+    }
+    .experiences .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .experiences .wrapper .titulo{
+        display: block;
+        width: 100%;
+    }
+    .experience{
+        width: 48%;
+    }
+    .titulo-experience{
+        font-size: 20px;
+    }
+    .experience-description{
+        font-size: 17px;
+    }
 }
 /* FIN DE EXPERIENCIAS */
 
 /* CONTACTO */
 .contact{
     width: 100%;
+    padding: 1.5rem;
+    background-color: #72C0DD;
 }
+.formulario-contacto{
+    width: 100%;
+}
+.contact input[type=text]{
+    border-radius: 5px;
+    padding: 5px 5px 5px 30px;
+    background-image: url(../img/email.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position-y: center;
+    background-position-x: 3px;
+    outline: none;
+    border-color: gray;
+    border-style: solid;
+    margin-top: 20px;
+    display: block;
+    margin: 1.3rem auto;
+}
+.form-boton{
+    display: block;
+    margin: 1.3rem auto;
+}
+.contact-title{
+    padding: 0;
+    font-size: 20px;
+    text-align: center;
+}
+    /* REDES */
+.redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.redes-link{
+    width: 50px;
+    height: 50px;
+    margin: 0 1rem 0.5rem 0;
+}
+.redes-link:last-of-type{
+    margin-right: 0;
+}
+.github{
+    background-image: url(../img/github.svg);
+    background-size: 50px 50px;
+}
+.facebook{
+    background-image: url(../img/facebook.svg);
+    background-size: 50px 50px;
+}
+.instagram{
+    background-image: url(/img/instagram.svg);
+    background-size: 50px 50px;
+}
+.twitter{
+    background-image: url(/img/twitter.svg);
+    background-size: 50px 50px;
+}
+/* FIN DE REDES */
+@media screen and (max-width: 320px){
+    .contact-title{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 560px){
+    .formulario-contacto{
+        width: 100%;
+    }
+    .contact .wrapper{
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 768px){
+    .contact{
+        padding: 0 2rem;
+        padding-bottom: 0;
+    }
+    .contact .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    .formulario-contacto{
+        width: auto;
+    }
+    .contact-title{
+        padding: 1rem 0;
+    }
+    .contact input[type=text]{
+        margin: 0;
+    }
+    .form-boton{
+        margin: 1rem 0;
+    }
+}
+@media screen and (min-width: 1024px){
+    .contact{
+        padding: 0.5rem 3rem;
+    }
+    .contact-title{
+        padding: 1.5rem 0;
+    }
+    .form-boton{
+        margin: 1.5rem 0;
+    }
+    .redes-link {
+        width: 50px;
+        height: 50px;
+        margin: 0 1.7rem 0.5rem 0;
+    }
+}
+
 /* FIN DE CONTACTO */
 
 /* FOOTER */
 .footer{
+    display: block;
     width: 100%;
+    margin: 0;
+    padding: 1rem 1rem 0.5rem 1rem;
+    background-color: rgb(12, 83, 175);
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 320px){
+    .footer p{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 768px){
+    .footer{
+        padding: 1rem 2rem 0.5rem 2rem;
+    }
+    .footer .wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer p{
+        display: block;
+    }
+}
+@media screen and (min-width: 1024px){
+    .footer{
+     padding: 1rem 3rem;
+    }
 }
 /* FIN DE FOOTER */
+/* ADICIONALES */
+@media screen and (min-width: 1150px){
+    .header figure,
+    .presentacion-main{
+        padding-left: 0;
+    }
+}
