@@ -18,6 +18,9 @@ html{
 *, *:before, * :after{
     box-sizing: inherit;
 }
+a{
+    text-decoration: none;
+}
 .titulo{
     padding: 0 0 1.5rem 0;
     font-size: 20px;
@@ -256,6 +259,7 @@ li{
     width: 100%;
     padding: 1.5rem;
     padding-bottom: 0;
+    margin-bottom: 20px;
 }
 .project{
     box-shadow: 0 0 6px black;
@@ -494,12 +498,12 @@ li{
     background-image: url(../img/facebook.svg);
     background-size: 50px 50px;
 }
-.instagram{
-    background-image: url(/img/instagram.svg);
+.linkedin{
+    background-image: url(../img/linkedin.svg);
     background-size: 50px 50px;
 }
-.twitter{
-    background-image: url(/img/twitter.svg);
+.whatsapp{
+    background-image: url(../img/whatsapp.svg);
     background-size: 50px 50px;
 }
 /* FIN DE REDES */
@@ -522,7 +526,6 @@ li{
         padding-bottom: 0;
     }
     .contact .wrapper{
-        display: flex;
         justify-content: space-between;
         align-content: center;
         flex-wrap: wrap;
